@@ -1,8 +1,8 @@
-package com.ssp.aaps.springcore.controller;
+package com.ssp.apps.springcore.controller;
 
 import org.springframework.stereotype.Controller;
-import com.ssp.aaps.springcore.dto.User;
-import com.ssp.aaps.springcore.service.UserService;
+import com.ssp.apps.springcore.dto.User;
+import com.ssp.apps.springcore.service.UserService;
 
 @Controller
 public class UserController {

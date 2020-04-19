@@ -1,10 +1,10 @@
-package com.ssp.aaps.springcore.configuration;
+package com.ssp.apps.springcore.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import com.ssp.aaps.springcore.dao.DataSource;
-import com.ssp.aaps.springcore.dao.UatDataSource;
+import com.ssp.apps.springcore.dao.DataSource;
+import com.ssp.apps.springcore.dao.UatDataSource;
 
 @Configuration
 @Import({ControllerConfiguration.class, ServiceConfiguration.class, DaoConfiguration.class})

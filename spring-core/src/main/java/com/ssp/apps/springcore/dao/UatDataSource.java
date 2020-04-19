@@ -1,4 +1,4 @@
-package com.ssp.aaps.springcore.dao;
+package com.ssp.apps.springcore.dao;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;

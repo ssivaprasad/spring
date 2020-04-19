@@ -1,8 +1,8 @@
-package com.ssp.aaps.springcore.configuration;
+package com.ssp.apps.springcore.configuration;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import com.ssp.aaps.springcore.dao.TestDataSource;
+import com.ssp.apps.springcore.dao.TestDataSource;
 
 public class DataSourceProcessor implements BeanPostProcessor {
 

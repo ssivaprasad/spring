@@ -1,4 +1,4 @@
-package com.ssp.aaps.springcore.configuration;
+package com.ssp.apps.springcore.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

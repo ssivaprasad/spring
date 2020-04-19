@@ -1,9 +1,9 @@
-package com.ssp.aaps.springcore.service;
+package com.ssp.apps.springcore.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.ssp.aaps.springcore.dao.UserDao;
-import com.ssp.aaps.springcore.dto.User;
+import com.ssp.apps.springcore.dao.UserDao;
+import com.ssp.apps.springcore.dto.User;
 
 @Component
 public class UserService {

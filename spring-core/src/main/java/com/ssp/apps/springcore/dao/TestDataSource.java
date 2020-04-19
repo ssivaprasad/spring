@@ -1,4 +1,4 @@
-package com.ssp.aaps.springcore.dao;
+package com.ssp.apps.springcore.dao;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

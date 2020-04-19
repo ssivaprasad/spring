@@ -1,4 +1,4 @@
-package com.ssp.aaps.springcore.dao;
+package com.ssp.apps.springcore.dao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

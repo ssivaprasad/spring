@@ -1,11 +1,11 @@
-package com.ssp.aaps.springcore;
+package com.ssp.apps.springcore;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.ssp.aaps.springcore.configuration.CustomConfiguration;
-import com.ssp.aaps.springcore.controller.UserController;
-import com.ssp.aaps.springcore.dto.User;
+import com.ssp.apps.springcore.configuration.CustomConfiguration;
+import com.ssp.apps.springcore.controller.UserController;
+import com.ssp.apps.springcore.dto.User;
 
 public class Main {
 

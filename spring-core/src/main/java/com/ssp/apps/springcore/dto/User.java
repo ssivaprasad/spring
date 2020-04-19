@@ -1,4 +1,4 @@
-package com.ssp.aaps.springcore.dto;
+package com.ssp.apps.springcore.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
