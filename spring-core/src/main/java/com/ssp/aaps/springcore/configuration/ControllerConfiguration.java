@@ -1,5 +1,6 @@
 package com.ssp.aaps.springcore.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,4 +8,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.ssp.aaps.springcore.controller")
 public class ControllerConfiguration {
 
+
+  @Bean
+  public DataSourceProcessor dataSourceProcessor() {
+    return new DataSourceProcessor();
+  }
 }
