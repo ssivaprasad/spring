@@ -7,4 +7,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.ssp.aaps.springcore")
 public class CustomConfiguration {
 
+
+
 }
