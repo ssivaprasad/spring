@@ -7,7 +7,7 @@ import com.ssp.aaps.springcore.dao.DataSource;
 import com.ssp.aaps.springcore.dao.UatDataSource;
 
 @Configuration
-@Import({DaoConfiguration.class, ServiceConfiguration.class, ControllerConfiguration.class})
+@Import({ControllerConfiguration.class, ServiceConfiguration.class, DaoConfiguration.class})
 public class CustomConfiguration {
 
   @Bean
