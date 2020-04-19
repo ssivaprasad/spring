@@ -1,10 +1,10 @@
 package com.ssp.aaps.springcore.dao;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+@Profile("uat")
 public class UatDataSource implements DataSource {
 
   public void getConnection() {

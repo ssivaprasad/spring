@@ -12,9 +12,11 @@ public class Main {
   public static void main(String[] args) {
     ApplicationContext context = new AnnotationConfigApplicationContext(CustomConfiguration.class);
 
-    for (String name : context.getBeanDefinitionNames()) {
-      System.out.println("Bean Name: " + name);
-    }
+    /*
+     * for (String name : context.getBeanDefinitionNames()) { System.out.println("Bean Name: " +
+     * name); }
+     */
+
     UserController userController = context.getBean("userController", UserController.class);
     userController.createuser();
 

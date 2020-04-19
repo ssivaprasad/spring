@@ -2,9 +2,11 @@ package com.ssp.aaps.springcore.dao;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("sit")
 public class TestDataSource implements DataSource {
 
   public void getConnection() {
