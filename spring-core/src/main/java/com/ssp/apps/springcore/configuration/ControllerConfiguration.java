@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import com.ssp.apps.springcore.dto.User;
 
 @Configuration
-@ComponentScan("com.ssp.aaps.springcore.controller")
+@ComponentScan("com.ssp.apps.springcore.controller")
 public class ControllerConfiguration {
 
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div>
+    <table>
+        <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Date Of Birth</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.firstName}">Siva111</td>
+            <td>Prasad</td>
+            <td>31</td>
+            <td>12-SEP-2019</td>
+            <td>
+                <button>View</button>
+                <button>Update</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
