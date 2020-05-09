@@ -7,27 +7,54 @@ target/
 ### STS ###
 .apt_generated
 .classpath
+**/.classpath
+
 .factorypath
+**/.factorypath
+
 .project
+**/.project
+
 .settings
+**/.settings
+
 .springBeans
+**/.springBeans
+
 .sts4-cache
+**/.sts4-cache
 
 ### IntelliJ IDEA ###
 .idea
+**/.idea
+
 *.iws
+**/*.iws
+
 *.iml
+**/*.iml
+
 *.ipr
+**/*.ipr
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
 
-### VS Code ###
-.vscode/
-**/target
+.settings
+**/.settings
+
+.classpath
+**/.classpath
+
+.factorypath
+**/.factorypath
+
+.project
+**/.project
+
+MANIFEST.MF
+**/MANIFEST.MF
+
 target
+**/target
+
+bin
+**/bin
