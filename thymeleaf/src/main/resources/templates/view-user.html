@@ -3,24 +3,28 @@
 
 <body>
 
-<div>
-    <table>
-        <tr>
-            <td style="font-weight: bold">Name:</td>
-            <!-- Extracting data from Model -->
-            <!-- Concatenating Strings -->
-            <td th:text="|${user.firstName} ${user.lastName}, Your are most welcome!!|">SivaPrasad</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Age:</td>
-            <td th:text="${user.age}">30</td>  <!-- Extracting data from Model -->
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Date Of Birth:</td>
-             <!-- Extracting data from Model -->
-              <!-- Formatting Dates and Strings -->
-            <td th:text="${#dates.format(user.dateOfBirth,'dd-MMM-yyyy')}">01-10-2019</td>
-        </tr>
-    </table>
-</div>
+		<div>
+				<a th:href="@{/}">Home</a><a th:if="${isViewMode}" th:href="@{/}">Submit</a> <a th:href="@{/users}">Cancel</a>
+		</div>
+		<div>
+				<table>
+						<tr>
+								<td style="font-weight: bold">Name:</td>
+								<!-- Extracting data from Model -->
+								<!-- Concatenating Strings -->
+								<td th:text="|${user.firstName} ${user.lastName}, Your are most welcome!!|">SivaPrasad</td>
+						</tr>
+						<tr>
+								<td style="font-weight: bold">Age:</td>
+								<td th:text="${user.age}">30</td>
+								<!-- Extracting data from Model -->
+						</tr>
+						<tr>
+								<td style="font-weight: bold">Date Of Birth:</td>
+								<!-- Extracting data from Model -->
+								<!-- Formatting Dates and Strings -->
+								<td th:text="${#dates.format(user.dateOfBirth,'dd-MMM-yyyy')}">01-10-2019</td>
+						</tr>
+				</table>
+		</div>
 </body>

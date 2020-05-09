@@ -35,6 +35,8 @@ public class UserController {
     public String viewUserDetails(ModelMap model, @RequestParam(name = "id") String userId) {
         log.info("== >> UserId: {}", userId);
         User user = userService.getUser(userId);
+        model.addAttribute("pageOperation", "VIEW");
+        model.addAttribute("isViewMode", true);
         model.addAttribute("user", userMapper.convert2Dto(user));
         return "view-user";
     }
