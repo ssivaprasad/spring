@@ -1,34 +1,33 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <body>
-	<div>
-		<a th:href="@{/}">Home</a>
-	</div>
-	<br />
-	<div>
-		<table>
-			<thead>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Age</th>
-				<th>Date Of Birth</th>
-				<th>Action</th>
-			</thead>
-			<tbody>
-				<tr th:each="user: ${users}">
-					<td th:text="${user.firstName}">Siva111</td>
-					<td th:text="${user.lastName}">Prasad</td>
-					<td th:text="${user.age}">31</td>
-					<td th:text="${user.dateOfBirth}">12-SEP-2019</td>
-					<td>
-						<button>View</button>
-						<button>Update</button>
-						<button>Delete</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<div>
+				<a th:href="@{/}">Home</a>
+		</div>
+		<br />
+		<div>
+				<table>
+						<thead>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Age</th>
+								<th>Date Of Birth</th>
+								<th>Action</th>
+						</thead>
+						<tbody>
+								<tr th:each="user: ${users}">
+										<td th:text="${user.firstName}">Siva111</td>
+										<td th:text="${user.lastName}">Prasad</td>
+										<td th:text="${user.age}">31</td>
+										<td th:text="${user.dateOfBirth}">12-SEP-2019</td>
+										<td>
+											<!-- Dynamic Links -->
+											<a th:href="@{/users/view-user(id=${user.id})}">View</a>
+											<a>Update</a>
+											<a>Delete</a></td>
+								</tr>
+						</tbody>
+				</table>
+		</div>
 </body>
