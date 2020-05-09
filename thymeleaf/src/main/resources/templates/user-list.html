@@ -16,16 +16,15 @@
 								<th>Action</th>
 						</thead>
 						<tbody>
+								<!-- Looping through Collections -->
 								<tr th:each="user: ${users}">
 										<td th:text="${user.firstName}">Siva111</td>
 										<td th:text="${user.lastName}">Prasad</td>
 										<td th:text="${user.age}">31</td>
 										<td th:text="${user.dateOfBirth}">12-SEP-2019</td>
 										<td>
-											<!-- Dynamic Links -->
-											<a th:href="@{/users/view-user(id=${user.id})}">View</a>
-											<a>Update</a>
-											<a>Delete</a></td>
+												<!--Implementing  Dynamic Links --> <a th:href="@{/users/view-user(id=${user.id})}">View</a> <a>Update</a> <a>Delete</a>
+										</td>
 								</tr>
 						</tbody>
 				</table>
