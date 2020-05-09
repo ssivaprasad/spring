@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<head>
+<style type="text/css">
+a {
+	text-decoration: none;
+	font-size: larger;
+}
+</style>
+</head>
+<div>
+		<a th:href="@{/welcome}">1. th:text : Display text and expression evaluation</a>
+</div>
+<div>
+		<a th:href="@{/users/view-user}">2. Extracting data from Model and Formatting Dates and Strings</a>
+</div>
+<div>
+		<a th:href="@{/loops}"></a>
+</div>
+</body>
