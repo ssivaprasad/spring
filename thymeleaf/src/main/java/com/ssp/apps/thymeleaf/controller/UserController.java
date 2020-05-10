@@ -4,9 +4,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.ssp.apps.thymeleaf.dto.UserDto;
 import com.ssp.apps.thymeleaf.entity.User;
 import com.ssp.apps.thymeleaf.mapper.UserMapper;
 import com.ssp.apps.thymeleaf.service.UserService;
@@ -23,7 +24,7 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-    @GetMapping
+    @RequestMapping
     public String getAllUsers(ModelMap model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", userMapper.conver2UserDtoList(users));
@@ -31,7 +32,7 @@ public class UserController {
     }
 
 
-    @GetMapping("view-user")
+    @RequestMapping("/view-user")
     public String viewUserDetails(ModelMap model, @RequestParam(name = "id") String userId) {
         log.info("== >> UserId: {}", userId);
         User user = userService.getUser(userId);
@@ -41,8 +42,16 @@ public class UserController {
         return "users/view-user";
     }
 
-    @GetMapping("create-user")
-    public String createUser() {
+    @RequestMapping("/create-user")
+    public String createUser(ModelMap model) {
+        model.addAttribute("user", new UserDto());
         return "users/create-user";
+    }
+
+    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
+    public String saveUser(ModelMap model, UserDto userDto) {
+        userService.createUser(new User(userDto.getId(), userDto.getFirstName(),
+                userDto.getLastName(), userDto.getAge(), userDto.getDateOfBirth()));
+        return getAllUsers(model);
     }
 }
