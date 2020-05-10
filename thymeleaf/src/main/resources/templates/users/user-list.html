@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
+
+<div class="container" th:fragment="page__content">
+      <div>
+            <a th:href="@{/}">Home</a>
+      </div>
+      <table class="table table-striped">
+            <thead>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Age</th>
+                  <th>Date Of Birth</th>
+                  <th>Action</th>
+            </thead>
+            <tbody>
+                  <!-- Looping through Collections -->
+                  <tr th:each="user: ${users}">
+                        <td th:text="${user.firstName}">Siva111</td>
+                        <td th:text="${user.lastName}">Prasad</td>
+                        <td th:text="${user.age}">31</td>
+                        <td th:text="${user.dateOfBirth}">12-SEP-2019</td>
+                        <td>
+                              <!--Implementing  Dynamic Links -->
+                              <a th:href="@{/users/view-user(id=${user.id})}" type="button" class="btn btn-success">View</a>
+                              <a type="button" class="btn btn-primary">Update</a>
+                              <a type="button" class="btn btn-danger">Delete</a>
+                        </td>
+                  </tr>
+            </tbody>
+      </table>
+</div>

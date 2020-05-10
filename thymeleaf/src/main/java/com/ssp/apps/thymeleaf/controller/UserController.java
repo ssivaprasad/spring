@@ -27,7 +27,7 @@ public class UserController {
     public String getAllUsers(ModelMap model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", userMapper.conver2UserDtoList(users));
-        return "user-list";
+        return "users/user-list";
     }
 
 
@@ -38,6 +38,11 @@ public class UserController {
         model.addAttribute("pageOperation", "VIEW");
         model.addAttribute("isViewMode", true);
         model.addAttribute("user", userMapper.convert2Dto(user));
-        return "view-user";
+        return "users/view-user";
+    }
+
+    @GetMapping("create-user")
+    public String createUser() {
+        return "users/create-user";
     }
 }

@@ -1,16 +1,12 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
 
-<body>
-
-	<!-- th:text : display text and expression evaluation -->
-	<h3 th:text="'Hello !!'">Welcome !!!!!</h3>
-	<h3 th:text="${userName}">Welcome !!!!</h3>
-	<h3 th:text="'Hello ' + ${userName}">Welcome !!!!</h3>
-	<h3 th:text="${'Hello ' + userName}">Welcome !!!!</h3>
-	<h3>
-		Hello <span th:text=" ${userName}"></span> !!!!
-	</h3>
-</body>
-</html>
+<div class="container" th:fragment="page__content">
+      <!-- th:text : display text and expression evaluation -->
+      <h3 th:text="'Hello !!'">Welcome !!!!!</h3>
+      <h3 th:text="${userName}">Welcome !!!!</h3>
+      <h3 th:text="'Hello ' + ${userName}">Welcome !!!!</h3>
+      <h3 th:text="${'Hello ' + userName}">Welcome !!!!</h3>
+      <h3>
+            Hello <span th:text=" ${userName}"></span> !!!!
+      </h3>
+</div>

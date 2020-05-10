@@ -1,52 +1,36 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html  xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
 
-<body>
-<head>
-<!-- Loading Css File -->
-<link rel="stylesheet" href="main.css" th:href="@{css/main.css}" />
-
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
-</head>
-<div class="container">
-		<div>
-				<!-- welcome.html -->
-				<a th:href="@{/welcome}">1. th:text : Display text and expression evaluation</a>
-		</div>
-		<div>
-				<!-- view-user.html -->
-				<a th:href="@{/users/view-user}">2. Extracting data from Model and Formatting Dates and Strings</a>
-		</div>
-		<div>
-				<!-- user-list.html -->
-				<a th:href="@{/users}">3. Looping through Collections</a>
-		</div>
-		<div>
-				<!-- home.html -->
-				<a th:href="@{/}">4. Creating links</a>
-		</div>
-		<div>
-				<!-- user-list.html -->
-				<a th:href="@{/users}">5. Creating dynamic links</a>
-		</div>
-		<div>
-				<!-- view-user.html -->
-				<a th:href="@{/users}">6. Conditional Display</a>
-		</div>
-		<div>
-				<!-- home.html -->
-				<a th:href="@{/}">7. Using CSS Files</a>
-		</div>
-		<div>
-				<!-- home.html -->
-				<a th:href="@{/}">8. Creating and Using Fragments</a>
-		</div>
+<div class="container" th:fragment="page__content">
+      <div>
+            <!-- welcome.html -->
+            <a th:href="@{/welcome}">1. th:text : Display text and expression evaluation</a>
+      </div>
+      <div>
+            <!-- view-user.html -->
+            <a th:href="@{/users/view-user}">2. Extracting data from Model and Formatting Dates and Strings</a>
+      </div>
+      <div>
+            <!-- user-list.html -->
+            <a th:href="@{/users}">3. Looping through Collections</a>
+      </div>
+      <div>
+            <!-- home.html -->
+            <a th:href="@{/}">4. Creating links</a>
+      </div>
+      <div>
+            <!-- user-list.html -->
+            <a th:href="@{/users}">5. Creating dynamic links</a>
+      </div>
+      <div>
+            <!-- view-user.html -->
+            <a th:href="@{/users}">6. Conditional Display</a>
+      </div>
+      <div>
+            <!-- home.html -->
+            <a th:href="@{/}">7. Using CSS Files</a>
+      </div>
+      <div>
+            <!-- home.html -->
+            <a th:href="@{/}">8. Creating and Using Fragments</a>
+      </div>
 </div>
-<div>
-		<!-- Creating and Using Fragments -->
-		<div th:replace="fragments/menu :: footer-menu"></div>
-</div>
-</body>

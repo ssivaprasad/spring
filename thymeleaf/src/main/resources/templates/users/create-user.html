@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<head>
+<!-- Loading Css File -->
+<link rel="stylesheet" href="main.css" th:href="@{css/main.css}" />
+
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+</head>
+
+<form class="form__group" th:object="">
+      <div class="container">
+            <div>
+                  <label for="username" class="sr-only">Username</label>
+                  <input type="text" id="firstName" name="firstName" class="form__control" placeholder="First Name" required>
+            </div>
+      </div>
+</form>
+</body>

@@ -7,7 +7,8 @@ body {
 a {
 	text-decoration: none;
 	font-size: larger;
-	margin: 5px
+	margin: 5px;
+	font-weight: bolder;
 }
 
 .form__group {
